@@ -1,6 +1,10 @@
 # overlayRestrict
  Displays a semi-transparent overlay on a computer screen with an optional message and keyboard hook
  The message argument supports newlines using \n as well as other \ stuff
+ 
+### Dependancies
+[wxPython](https://pypi.org/project/wxPython/)
+[keyboard](https://pypi.org/project/keyboard/)
 
 ### How to use
 ```
