@@ -4,7 +4,13 @@
  
 ### Dependancies
 [wxPython](https://pypi.org/project/wxPython/)
+
 [keyboard](https://pypi.org/project/keyboard/)
+
+```bash
+# You can install the dependancies by running the command below after cloning the repo
+pip install -r requirements.txt
+```
 
 ### How to use
 ```
