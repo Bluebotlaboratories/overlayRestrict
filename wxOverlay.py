@@ -2,20 +2,18 @@
 # Copyright Bluebotlaboratories
 # bluebotlaboratories.com
 #
-# overlayRestrict
+# wxOverlay
 #
 # Program that displays overlay on user's PC
 # Customizable message using command arguments
 ###
-
-# sample_one.py
 
 import wx
 import keyboard
 import argparse
 
 
-parser = argparse.ArgumentParser(description="Display an opaque overlay on a user's PC")
+parser = argparse.ArgumentParser(description="Display a semi-transparent overlay on a user's PC")
 parser.add_argument('message', type=str, help='The message to display on the overlay')
 parser.add_argument('-a', '--alpha', default=150, type=int, help='The alpha of the message (0-255, 255 is solid) (default: 150)')
 parser.add_argument('-b', '--blockKeyboard', action="store_true", help='Block keyboard input (cannot block CTRL+ALT+DEL as it is an OS-level shortcut, however, this blocks just about everything else)')
@@ -26,7 +24,7 @@ parser.add_argument('-t', '--textColour', type=str, default="#000000", help='The
 
 args = parser.parse_args()
 
-addedMessage = "\n\n\n\nPowered By:\nBluebotlaboratories\nPC Restrict"
+addedMessage = "\n\n\n\nPowered By:\nBluebotlaboratories\nwxOverlay"
 processedMessage = str(eval("\"" + args.message.replace("\"", "\\\"") + "\""))
 
 class alphaFrame(wx.Frame):
